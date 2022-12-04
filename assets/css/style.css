@@ -338,6 +338,7 @@ nav .fas {
         height: 75vh;
         padding-top: 50px;
         z-index: 2;
+        transition: left .5s;
 
     }
 
