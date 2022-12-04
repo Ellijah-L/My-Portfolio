@@ -16,7 +16,7 @@ html {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgba(0, 0, 0, .5);
     position: sticky;
     top: 0;
@@ -26,9 +26,11 @@ html {
     display: flex;
     list-style: none;
     margin: 1.25rem 0rem;
+    flex-wrap: wrap;
 }
 
 .navbar ul li {
+    display: inline-block;
     font-size: 1.1rem;
     font-weight: bold;
 }
@@ -45,6 +47,7 @@ html {
     color: #d8d39c;
     box-shadow: 0 0 10px #7d4618;
 }
+
 
 /* Home Section */
 #home {
@@ -107,6 +110,7 @@ html {
     padding: 5rem 0;
     color: #d8d39c;
     height: 55rem;
+    overflow: auto;
 }
 
 .row {
@@ -127,6 +131,8 @@ html {
 
 .about-col-2 {
     flex-basis: 50%;
+    overflow: hidden;
+    height: auto;
 }
 
 .title {
@@ -179,6 +185,8 @@ html {
 
 .tab-content {
     display: none;
+    height: auto;
+    overflow: auto;
 }
 
 .tab-content ul li {
@@ -294,4 +302,100 @@ html {
 ::-webkit-scrollbar-track-piece:end {
     background: transparent;
     margin-top: 2px;
+}
+
+
+/* media queries */
+nav .fas {
+    display: none;
+    color: #d8d39c;
+}
+@media screen and (max-width: 480px) {
+
+    html {
+        margin: auto 2rem;;
+    }
+
+    .main .headings {
+        font-size: 40px;
+    }
+
+    nav .fas {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 .75rem;
+        display: block;
+        font-size: 1.25rem;
+    }
+
+    nav ul {
+        background: #7d4618;       
+        position: fixed;
+        top: 0;
+        left: -175px;
+        width: 175px;
+        height: 75vh;
+        padding-top: 50px;
+        z-index: 2;
+
+    }
+
+    nav ul li {
+        flex-direction: column;
+        display: block;
+        color: #d8d39c;
+        margin:20px;
+    }
+
+    nav ul li a {
+        padding: 0;
+    }
+
+    .navbar {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+       
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    
+    
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (min-width: 1201px) {
+
 }

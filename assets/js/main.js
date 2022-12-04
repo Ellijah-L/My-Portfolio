@@ -2,8 +2,32 @@ const skillsList = document.getElementById('skills');
 const educationList = document.getElementById('education');
 const skillsButton = document.getElementById('skill-button');
 const educationButtton = document.getElementById('education-button');
-const highLight = document.getElementById('tab-links')
+const highLight = document.getElementById('tab-links');
+const navMenu = document.getElementById('navbar');
+const openMenu = document.getElementById('open');
+const closeMenu = document.getElementById('close');
 
+
+// Nav menu
+openMenu.onclick = function() {
+    menuScreen();
+}
+
+closeMenu.onclick = function() {
+    menuScreen();
+}
+
+const menuScreen = () => {
+    let show = navMenu;
+    if (show.style.left === "-175px") {
+        show.style.left = '0'
+    } else {
+        show.style.left = '-175px'
+    }
+
+};
+
+// Skills and Education tab
 skillsButton.onclick = function()  {
     listOne();
 }
